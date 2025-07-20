@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * @property int $id
@@ -31,7 +32,7 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Admin whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Admin extends Model {
+class Admin extends Authenticatable {
     /** @use HasFactory<\Database\Factories\AdminFactory> */
     use HasFactory, Notifiable;
     /**
