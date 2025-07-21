@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\RedirectIfNotAdmin;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,5 +18,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/dashboard', function () {
+
+            return view('admin.dashboard');
+        })->name('dashboard');
+    });
+});
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
