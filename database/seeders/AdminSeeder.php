@@ -16,5 +16,10 @@ class AdminSeeder extends Seeder {
             'email' => 'admin@gmail.com',
             'password' => 'password',
         ]);
+        Admin::create([
+            'name' => 'eslam',
+            'email' => 'eslamkamelforex@gmail.com',
+            'password' => 'password',
+        ]);
     }
 }
