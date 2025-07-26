@@ -15,7 +15,8 @@ class CheckRoleMiddleware {
      */
     public function handle(Request $request, Closure $next, string $role): Response {
         $user = auth('web')->user();
-        if ($user->role === $role) {
+        // dd($role, $user->role->value);
+        if ($user->role->value === $role) {
             return $next($request);
         }
         return redirect('/');
