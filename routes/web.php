@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\InstructorController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfNotAdmin;
@@ -13,19 +14,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::middleware(['admin'])->group(function () {
         Route::get('/dashboard', function () {
-
             return view('admin.dashboard');
         })->name('dashboard');
     });
 });
+
 Route::group([
     'middleware' => ['auth', 'check_role:student'],
     'prefix' => '/student',
@@ -33,6 +35,15 @@ Route::group([
 ], function () {
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
 });
+
+Route::group([
+    'middleware' => ['auth', 'check_role:instructor'],
+    'prefix' => '/instructor',
+    'as' => 'instructor.'
+], function () {
+    Route::get('/dashboard', [InstructorController::class, 'index'])->name('dashboard');
+});
+
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
 

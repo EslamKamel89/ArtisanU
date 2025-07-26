@@ -18,7 +18,7 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        @include('layouts.admin-navigation')
+        @include('layouts.admin_navigation')
 
         <!-- Page Heading -->
         @isset($header)
