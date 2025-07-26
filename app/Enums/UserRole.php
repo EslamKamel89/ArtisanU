@@ -3,11 +3,11 @@
 namespace App\Enums;
 
 enum UserRole: string {
-    case user = "user";
+    case instructor = "instructor";
     case student = "student";
     public function label(): string {
         return match ($this) {
-            self::user => 'User',
+            self::instructor => 'Instructor',
             self::student => 'Student',
         };
     }
