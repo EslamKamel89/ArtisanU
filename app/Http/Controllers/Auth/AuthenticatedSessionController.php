@@ -28,8 +28,10 @@ class AuthenticatedSessionController extends Controller {
         // dd(auth()->user()->role->value, UserRole::student->value);
         if (auth()->user()->role === UserRole::student) {
             return redirect()->intended(route('student.dashboard', absolute: false));
+        } elseif (auth()->user()->role === UserRole::instructor) {
+            return redirect()->intended(route('instructor.dashboard', absolute: false));
         }
-        return redirect()->intended(route('instructor.dashboard', absolute: false));
+        abort(404);
     }
 
     /**

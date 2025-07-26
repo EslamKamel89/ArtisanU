@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Frontend\InstructorController;
-use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\AdminDashboardController;
+use App\Http\Controllers\Frontend\InstructorDashboardController;
+use App\Http\Controllers\Frontend\StudentDashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\RedirectIfNotAdmin;
 use Illuminate\Http\Request;
@@ -22,9 +23,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::middleware(['admin'])->group(function () {
-        Route::get('/dashboard', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     });
 });
 
@@ -33,7 +32,7 @@ Route::group([
     'prefix' => '/student',
     'as' => 'student.'
 ], function () {
-    Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [StudentDashboardController::class, 'index'])->name('dashboard');
 });
 
 Route::group([
@@ -41,7 +40,7 @@ Route::group([
     'prefix' => '/instructor',
     'as' => 'instructor.'
 ], function () {
-    Route::get('/dashboard', [InstructorController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [InstructorDashboardController::class, 'index'])->name('dashboard');
 });
 
 require __DIR__ . '/auth.php';
