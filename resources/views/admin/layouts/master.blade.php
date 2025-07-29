@@ -1,12 +1,4 @@
 <!doctype html>
-<!--
-* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
-* @version 1.0.0-beta20
-* @link https://tabler.io
-* Copyright 2018-2023 The Tabler Authors
-* Copyright 2018-2023 codecalm.net Paweł Kuna
-* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
--->
 <html lang="en">
 
 <head>
@@ -15,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
     <!-- CSS files -->
-    <link href="./dist/css/tabler.min.css?1692870487" rel="stylesheet" />
-    <link href="./dist/css/tabler-flags.min.css?1692870487" rel="stylesheet" />
-    <link href="./dist/css/tabler-payments.min.css?1692870487" rel="stylesheet" />
-    <link href="./dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet" />
-    <link href="./dist/css/demo.min.css?1692870487" rel="stylesheet" />
+    <link href="{{ asset('admin/assets/dist/css/tabler.min.css?1692870487')}}" rel="stylesheet" />
+    <link href="{{ asset('admin/assets/dist/css/tabler-flags.min.css?1692870487')}}" rel="stylesheet" />
+    <link href="{{ asset('admin/assets/dist/css/tabler-payments.min.css?1692870487')}}" rel="stylesheet" />
+    <link href="{{ asset('admin/assets/dist/css/tabler-vendors.min.css?1692870487')}}" rel="stylesheet" />
+    <link href="{{ asset('admin/assets/dist/css/demo.min.css?1692870487')}}" rel="stylesheet" />
     <style>
         @import url('https://rsms.me/inter/inter.css');
 
@@ -34,7 +26,7 @@
 </head>
 
 <body>
-    <script src="./dist/js/demo-theme.min.js?1692870487"></script>
+    <script src="{{ asset('admin/assets/dist/js/demo-theme.min.js?1692870487') }}"></script>
     <div class="page">
         <!-- Sidebar -->
         <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
@@ -44,7 +36,7 @@
                 </button>
                 <h1 class="navbar-brand navbar-brand-autodark">
                     <a href=".">
-                        <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                        <img src="{{ asset('admin/assets/static/logo.svg') }}" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                     </a>
                 </h1>
                 <div class="flex-row navbar-nav d-lg-none">
@@ -189,7 +181,7 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="p-0 nav-link d-flex lh-1 text-reset" data-bs-toggle="dropdown" aria-label="Open user menu">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                            <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000m.jpg)"></span>
                             <div class="d-none d-xl-block ps-2">
                                 <div>Paweł Kuna</div>
                                 <div class="mt-1 small text-secondary">UI Designer</div>
@@ -810,7 +802,7 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="p-0 nav-link d-flex lh-1 text-reset" data-bs-toggle="dropdown" aria-label="Open user menu">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                            <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000m.jpg)"></span>
                             <div class="d-none d-xl-block ps-2">
                                 <div>Paweł Kuna</div>
                                 <div class="mt-1 small text-secondary">UI Designer</div>
@@ -1212,7 +1204,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/002m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/002m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1228,7 +1220,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/003m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/003m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1244,7 +1236,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/000f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/000f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1260,7 +1252,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/001f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/001f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1286,7 +1278,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/002f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/002f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1299,7 +1291,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/003f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/003f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1325,7 +1317,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/006m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/006m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1338,7 +1330,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/004f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/004f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1351,7 +1343,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/007m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/007m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1377,7 +1369,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/009m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/009m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1390,7 +1382,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/010m.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/010m.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1403,7 +1395,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/005f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/005f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1416,7 +1408,7 @@
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-auto">
-                                                            <span class="avatar" style="background-image: url(./static/avatars/006f.jpg)"></span>
+                                                            <span class="avatar" style="background-image: url({{asset('admin/assets/static')}}/avatars/006f.jpg)"></span>
                                                         </div>
                                                         <div class="col">
                                                             <div class="text-truncate">
@@ -1483,7 +1475,7 @@
                                         <tbody>
                                             <tr>
                                                 <td class="w-1">
-                                                    <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                                                    <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000m.jpg)"></span>
                                                 </td>
                                                 <td class="td-truncate">
                                                     <div class="text-truncate">
@@ -1505,7 +1497,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="w-1">
-                                                    <span class="avatar avatar-sm" style="background-image: url(./static/avatars/002m.jpg)"></span>
+                                                    <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/002m.jpg)"></span>
                                                 </td>
                                                 <td class="td-truncate">
                                                     <div class="text-truncate">
@@ -1516,7 +1508,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="w-1">
-                                                    <span class="avatar avatar-sm" style="background-image: url(./static/avatars/003m.jpg)"></span>
+                                                    <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/003m.jpg)"></span>
                                                 </td>
                                                 <td class="td-truncate">
                                                     <div class="text-truncate">
@@ -1527,7 +1519,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="w-1">
-                                                    <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000f.jpg)"></span>
+                                                    <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000f.jpg)"></span>
                                                 </td>
                                                 <td class="td-truncate">
                                                     <div class="text-truncate">
@@ -1706,7 +1698,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
-                            <a href="https://github.com/sponsors/codecalm" class="card card-sponsor" target="_blank" rel="noopener" style="background-image: url(./static/sponsor-banner-homepage.svg)" aria-label="Sponsor Tabler!">
+                            <a href="https://github.com/sponsors/codecalm" class="card card-sponsor" target="_blank" rel="noopener" style="background-image: url({{asset('admin/assets/static')}}/sponsor-banner-homepage.svg)" aria-label="Sponsor Tabler!">
                                 <div class="card-body"></div>
                             </a>
                         </div>
@@ -1839,7 +1831,7 @@
                                                     3</a>
                                             </td>
                                             <td>
-                                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                                                <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000m.jpg)"></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1929,7 +1921,7 @@
                                                     1</a>
                                             </td>
                                             <td>
-                                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/002m.jpg)"></span>
+                                                <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/002m.jpg)"></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1974,7 +1966,7 @@
                                                     12</a>
                                             </td>
                                             <td>
-                                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/003m.jpg)"></span>
+                                                <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/003m.jpg)"></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -2019,7 +2011,7 @@
                                                     5</a>
                                             </td>
                                             <td>
-                                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000f.jpg)"></span>
+                                                <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/000f.jpg)"></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -2064,7 +2056,7 @@
                                                     3</a>
                                             </td>
                                             <td>
-                                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/001f.jpg)"></span>
+                                                <span class="avatar avatar-sm" style="background-image: url({{asset('admin/assets/static')}}/avatars/001f.jpg)"></span>
                                             </td>
                                         </tr>
                                     </table>
@@ -2553,13 +2545,13 @@
         </div>
     </div>
     <!-- Libs JS -->
-    <script src="./dist/libs/apexcharts/dist/apexcharts.min.js?1692870487" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1692870487" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world.js?1692870487" defer></script>
-    <script src="./dist/libs/jsvectormap/dist/maps/world-merc.js?1692870487" defer></script>
+    <script src="{{ asset('admin/assets/dist/libs/apexcharts/dist/apexcharts.min.js?1692870487')}}" defer></script>
+    <script src="{{ asset('admin/assets/dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1692870487')}}" defer></script>
+    <script src="{{ asset('admin/assets/dist/libs/jsvectormap/dist/maps/world.js?1692870487')}}" defer></script>
+    <script src="{{ asset('admin/assets/dist/libs/jsvectormap/dist/maps/world-merc.js?1692870487')}}" defer></script>
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1692870487" defer></script>
-    <script src="./dist/js/demo.min.js?1692870487" defer></script>
+    <script src="{{ asset('admin/assets/dist/js/tabler.min.js?1692870487')}}" defer></script>
+    <script src="{{ asset('admin/assets/dist/js/demo.min.js?1692870487')}}" defer></script>
     <script>
         // @formatter:off
         document.addEventListener("DOMContentLoaded", function() {
