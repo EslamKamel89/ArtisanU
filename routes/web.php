@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Frontend\AdminDashboardController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\InstructorDashboardController;
 use App\Http\Controllers\Frontend\StudentDashboardController;
 use App\Http\Controllers\ProfileController;
@@ -21,11 +21,7 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::middleware(['admin'])->group(function () {
-        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
-    });
-});
+
 
 Route::group([
     'middleware' => ['auth', 'check_role:student'],
@@ -44,6 +40,7 @@ Route::group([
 });
 
 require __DIR__ . '/auth.php';
+require __DIR__ . '/admin_auth.php';
 require __DIR__ . '/admin.php';
 
 Route::middleware('auth')->group(function () {
